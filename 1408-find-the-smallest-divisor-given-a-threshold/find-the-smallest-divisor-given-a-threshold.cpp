@@ -2,7 +2,7 @@ class Solution {
     bool ispossible(vector<int>& nums,int div, int threshold){
     int sum=0;
     for(int i=0;i<nums.size();i++){
-        sum+=ceil((double)nums[i]/div);
+        sum+=(nums[i] + (div - 1)) / div;
     }
     return sum<=threshold;
     }   
