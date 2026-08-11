@@ -15,7 +15,8 @@ public:
     }
     int maxDistance(vector<int>& position, int m) {
         sort(position.begin(),position.end());
-        int low=1,high=*max_element(position.begin(),position.end());
+        int n=position.size();
+        int low=1,high=position[n-1]-position[0];
         while(low<=high){
             int mid=(low+high)/2;
             if(canWePlace(position,mid,m)) low=mid+1;
